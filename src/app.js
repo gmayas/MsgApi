@@ -20,7 +20,7 @@ const msgsRouter = require("./routes/msgs.routes");
 app.use("/api", msgsRouter);
 
 // Database
-require('./js/database');
+require('./js/db/database');
 
 // listening the Server
 app.listen(app.get('port'), () => {

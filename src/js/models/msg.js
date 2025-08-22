@@ -3,8 +3,8 @@ const { Schema } = mongoose;
 
 const msgSchema = new Schema({
   message: String,
-  key: String,
-  creation: { type: Date, default: Date.now }
+  key_public: String,
+  key_private: String,
 });
 
 module.exports = mongoose.model('Msg', msgSchema);
