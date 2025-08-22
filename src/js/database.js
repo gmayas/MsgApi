@@ -8,5 +8,5 @@ if (!URIMONGODB) {
 }   
 //
 mongoose.connect(URIMONGODB, {})
-.then((db) => console.log("Mongodb is connected successfully in Cluster: ", process.env.CLUSTER_NAME))
+.then((db) => console.log("Mongodb is connected successfully in Cluster: ", process.env.CLUSTER_NAME || 'ClusterMsg'))
 .catch(err => console.log('Mongodb connected error in Cluster: ', err));
