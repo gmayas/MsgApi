@@ -5,9 +5,9 @@ const Msg = require('../js/models/msg');
 const getMessages = async ( req, res) => {
     try {
       let dataRetur = {};
-      const users = await Msg.find({}).sort({_id: -1});
+      const msgs = await Msg.find({}).sort({_id: -1});
       dataRetur = {
-        users,
+        msgs,
         message: "Query Success", 
         Ok: true
       }
@@ -15,7 +15,7 @@ const getMessages = async ( req, res) => {
     } catch (e) {
       console.log(e);
       dataRetur = {
-        users,
+        msgs: [],
         message: "Error in query:" + e, Ok: false
       }
       res.json(dataRetur);
